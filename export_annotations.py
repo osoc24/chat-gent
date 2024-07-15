@@ -7,6 +7,19 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 from tqdm import tqdm
 import json
 
+# Config variables
+
+# SparQL endpoint for the probe.stad.gent SPARQL endpoint
+probe_endpoint = "https://probe.stad.gent/sparql"
+# SparQL endpoint for the stad.gent SPARQL endpoint
+stadgent_endpoint = "https://stad.gent/sparql"
+# The file to write the annotations to in CSV format, set to false to disable
+annotations_csv = "annotations.csv"
+# The file to write the annotations to in JSON format, set to false to disable
+annotations_json = "annotations.json"
+# Whether to run this in test mode, AKA only get the first batch of annotations
+test_mode = False
+
 def escape_commas(string):
     # Check if the string contains a comma
     if "," in string:
@@ -16,36 +29,50 @@ def escape_commas(string):
         # Otherwise return the string as is
         return string
 
+def export_json(uri_label_dict):
+    # First we change the structure from URI: Label to something more JSON-like
+    # [ { "URI": URI, "Label": Label }, ... ]
+    json_data = []
+    for i in range(len(uri_label_dict.values())):
+        json_data.append({ "uri": list(uri_label_dict.keys())[i], "label": list(uri_label_dict.values())[i] })
+
+    return json_data
+
+# Create a SPARQLWrapper object for the probe endpoint
 probe = SPARQLWrapper(
-    "https://probe.stad.gent/sparql"
+    probe_endpoint
 )
 probe.setReturnFormat(JSON)
 
+# Create a SPARQLWrapper object for the stadgent endpoint
 stadgent = SPARQLWrapper(
-    "https://stad.gent/sparql"
+    stadgent_endpoint
 )
 stadgent.setReturnFormat(JSON)
 
 # Create a dictionary to store all URIs
 URIs = {}
 
-# First we select a count, so we know how many results we have
-probe.setQuery("""
-    PREFIX oa: <http://www.w3.org/ns/oa#>
+if test_mode:
+    annotationCount = 100
+else:
+    # First we select a count, so we know how many results we have
+    probe.setQuery("""
+        PREFIX oa: <http://www.w3.org/ns/oa#>
 
-    SELECT (COUNT(?entity) AS ?count)
-    WHERE {
-        ?entity a oa:Annotation ;
-        oa:hasBody ?body .
-    }
-    """
-)
+        SELECT (COUNT(?entity) AS ?count)
+        WHERE {
+            ?entity a oa:Annotation ;
+            oa:hasBody ?body .
+        }
+        """
+    )
 
-# Execute the query
-ret = probe.queryAndConvert()
+    # Execute the query
+    ret = probe.queryAndConvert()
 
-# Get the count
-annotationCount = int(ret["results"]["bindings"][0]["count"]["value"])
+    # Get the count
+    annotationCount = int(ret["results"]["bindings"][0]["count"]["value"])
 
 print("Annotation count:", annotationCount)
 
@@ -116,19 +143,23 @@ for i in tqdm(range(0, len(URIs.keys()), 1)):
     # Increase the offset
     offset += 1
 
-# Write a file mapping all URIs to labels
-with open("annotations.csv", "w") as file:
-    for i in range(len(URIs.values())):
-        file.write(list(URIs.keys())[i] + "," + escape_commas(list(URIs.values())[i]) + "\n")
+# Check if we need to write the annotations to a CSV file
+if annotations_csv:
+    print("Writing annotations to CSV file")
+    # Write a file mapping all URIs to labels
+    with open("annotations.csv", "w") as file:
+        for i in range(len(URIs.values())):
+            file.write(list(URIs.keys())[i] + "," + escape_commas(list(URIs.values())[i]) + "\n")
 
+if annotations_json:
+    print("Writing annotations to JSON file")
+    # Also write a file mapping all URIs to labels in JSON format
+    json_data = export_json(URIs)
 
-# Also write a file mapping all URIs to labels in JSON format
-# First we change the structure from URI: Label to something more JSON-like
-# [ { "URI": URI, "Label": Label }, ... ]
-json_data = []
-for i in range(len(URIs.values())):
-    json_data.append({ "uri": list(URIs.keys())[i], "label": list(URIs.values())[i] })
+    # Write the JSON data to a file
+    with open("annotations.json", "w") as file:
+        json.dump(json_data, file)
 
-# Write the JSON data to a file
-with open("annotations.json", "w") as file:
-    json.dump(json_data, file)
+# Output the JSON to the console if we're not writing it to any file
+if not annotations_csv and not annotations_json:
+    print(json.dumps(export_json(URIs), indent=4))
