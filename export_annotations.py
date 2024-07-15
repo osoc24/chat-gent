@@ -5,6 +5,7 @@ The idea is to use this CSV file as context when using an LLM to write queries f
 '''
 from SPARQLWrapper import SPARQLWrapper, JSON
 from tqdm import tqdm
+import json
 
 def escape_commas(string):
     # Check if the string contains a comma
@@ -25,8 +26,8 @@ stadgent = SPARQLWrapper(
 )
 stadgent.setReturnFormat(JSON)
 
-# Create a way to store all used labels
-URIs = []
+# Create a dictionary to store all URIs
+URIs = {}
 
 # First we select a count, so we know how many results we have
 probe.setQuery("""
@@ -34,7 +35,8 @@ probe.setQuery("""
 
     SELECT (COUNT(?entity) AS ?count)
     WHERE {
-        ?entity a oa:Annotation .
+        ?entity a oa:Annotation ;
+        oa:hasBody ?body .
     }
     """
 )
@@ -55,14 +57,14 @@ for i in tqdm(range(0, annotationCount, 100)):
     probe.setQuery("""
         PREFIX oa: <http://www.w3.org/ns/oa#>
 
-        SELECT ?body
+        SELECT ?body ?entity
         WHERE {
         ?entity a oa:Annotation ;
         oa:hasBody ?body .
         }
         ORDER BY ?entity
 
-        LIMIT 10
+        LIMIT 100
         OFFSET """ + str(i))
     
     # Execute the query
@@ -78,25 +80,25 @@ for i in tqdm(range(0, annotationCount, 100)):
 
         # Add the body to the labels, if it's not already there
         if body not in URIs:
-            URIs.append(body)
+            URIs[body] = True
+    
+    # Increase the offset
+    offset += 100
 
 # Print the label count
 print("URI count:", len(URIs))
 
-# Create a way to store all used labels
-labels = []
-
 # Start for loop based on the count
 offset = 0
 
-for i in tqdm(range(0, len(URIs), 1)):
+for i in tqdm(range(0, len(URIs.keys()), 1)):
     # Set the query to get the next batch
     stadgent.setQuery("""
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
         SELECT DISTINCT ?prefLabel
         WHERE {
-        <""" + URIs[i] + """> skos:prefLabel ?prefLabel .
+        <""" + list(URIs.keys())[i] + """> skos:prefLabel ?prefLabel .
         }
         """
     )
@@ -109,14 +111,24 @@ for i in tqdm(range(0, len(URIs), 1)):
 
     # Add the first result to the labels
     if len(results) > 0:
-        labels.append(results[0]["prefLabel"]["value"])
-
-
-# Print the label count
-print("Label count:", len(labels))
+        URIs[list(URIs.keys())[i]] = results[0]["prefLabel"]["value"]
+    
+    # Increase the offset
+    offset += 1
 
 # Write a file mapping all URIs to labels
 with open("annotations.csv", "w") as file:
-    for i in range(len(URIs)):
-        file.write(URIs[i] + "," + escape_commas(labels[i]) + "\n")
+    for i in range(len(URIs.values())):
+        file.write(list(URIs.keys())[i] + "," + escape_commas(list(URIs.values())[i]) + "\n")
 
+
+# Also write a file mapping all URIs to labels in JSON format
+# First we change the structure from URI: Label to something more JSON-like
+# [ { "URI": URI, "Label": Label }, ... ]
+json_data = []
+for i in range(len(URIs.values())):
+    json_data.append({ "uri": list(URIs.keys())[i], "label": list(URIs.values())[i] })
+
+# Write the JSON data to a file
+with open("annotations.json", "w") as file:
+    json.dump(json_data, file)
