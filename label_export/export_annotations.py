@@ -59,11 +59,11 @@ else:
     # First we select a count, so we know how many results we have
     probe.setQuery("""
         PREFIX oa: <http://www.w3.org/ns/oa#>
-
-        SELECT (COUNT(?entity) AS ?count)
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        SELECT (COUNT(DISTINCT ?body) AS ?bodyCount)
         WHERE {
-            ?entity a oa:Annotation ;
-            oa:hasBody ?body .
+            ?entity rdf:type oa:Annotation ;
+                    oa:hasBody ?body .
         }
         """
     )
@@ -72,7 +72,7 @@ else:
     ret = probe.queryAndConvert()
 
     # Get the count
-    annotationCount = int(ret["results"]["bindings"][0]["count"]["value"])
+    annotationCount = int(ret["results"]["bindings"][0]["bodyCount"]["value"])
 
 print("Annotation count:", annotationCount)
 
@@ -83,14 +83,12 @@ for i in tqdm(range(0, annotationCount, 100)):
     # Set the query to get the next batch
     probe.setQuery("""
         PREFIX oa: <http://www.w3.org/ns/oa#>
-
-        SELECT ?body ?entity
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        SELECT DISTINCT ?body
         WHERE {
-        ?entity a oa:Annotation ;
-        oa:hasBody ?body .
+            ?entity rdf:type oa:Annotation ;
+                oa:hasBody ?body .
         }
-        ORDER BY ?entity
-
         LIMIT 100
         OFFSET """ + str(i))
     
@@ -143,6 +141,9 @@ for i in tqdm(range(0, len(URIs.keys()), 1)):
     # Increase the offset
     offset += 1
 
+# Order the dictionary by URI (alphabetically)
+URIs = dict(sorted(URIs.items()))
+
 # Check if we need to write the annotations to a CSV file
 if annotations_csv:
     print("Writing annotations to CSV file")
@@ -158,7 +159,7 @@ if annotations_json:
 
     # Write the JSON data to a file
     with open("annotations.json", "w") as file:
-        json.dump(json_data, file)
+        json.dump(json_data, file, indent=4)
 
 # Output the JSON to the console if we're not writing it to any file
 if not annotations_csv and not annotations_json:
