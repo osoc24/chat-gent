@@ -19,6 +19,8 @@ annotations_csv = "annotations.csv"
 annotations_json = "annotations.json"
 # Whether to run this in test mode, AKA only get the first batch of annotations
 test_mode = False
+# Optionally, all narrowers of the concepts can also be retrieved, only works if at least annotations_json is enabled, or if the output is not written to a file
+fetch_children = True
 
 def escape_commas(string):
     # Check if the string contains a comma
@@ -34,7 +36,10 @@ def export_json(uri_label_dict):
     # [ { "URI": URI, "Label": Label }, ... ]
     json_data = []
     for i in range(len(uri_label_dict.values())):
-        json_data.append({ "uri": list(uri_label_dict.keys())[i], "label": list(uri_label_dict.values())[i] })
+        if fetch_children:
+            json_data.append({ "uri": list(uri_label_dict.keys())[i], "label": list(uri_label_dict.values())[i], "children": [] })
+        else:
+            json_data.append({ "uri": list(uri_label_dict.keys())[i], "label": list(uri_label_dict.values())[i] })
 
     return json_data
 
@@ -144,6 +149,49 @@ for i in tqdm(range(0, len(URIs.keys()), 1)):
 # Order the dictionary by URI (alphabetically)
 URIs = dict(sorted(URIs.items()))
 
+if annotations_json or not annotations_csv:
+    # Already remap all data to a JSON-like structure
+    json_data = export_json(URIs)
+
+# Check if we also need to fetch the children
+if fetch_children and (annotations_json or not annotations_csv):
+    stadgent.setQuery("""
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        SELECT *
+        WHERE {
+            <http://stad.gent/id/concepts/decision_making_themes/concept_20> skos:narrower+ ?id .
+            ?id skos:prefLabel ?label ;
+                skos:broader ?parent .
+        }
+    """)
+
+    ret = stadgent.queryAndConvert()
+
+    results = ret["results"]["bindings"]
+
+    # Now we need to place all children in the correct place in `json_data` (aka under the item children from their parent, which in some cases might not exist yet)
+    for result in results:
+        # Get the ID and label
+        id = result["id"]["value"]
+        label = result["label"]["value"]
+        parent = result["parent"]["value"]
+
+        # Check if the parent already exists in the JSON data
+        parent_index = -1
+        for i in range(len(json_data)):
+            if json_data[i]["uri"] == parent:
+                parent_index = i
+                break
+        
+        # If the parent doesn't exist, we need to add it
+        if parent_index == -1:
+            # Add the parent to the JSON data
+            json_data.append({ "uri": parent, "label": URIs[parent], "children": [] })
+            parent_index = len(json_data) - 1
+        
+        # Add the child to the parent
+        json_data[parent_index]["children"].append({ "uri": id, "label": label })
+
 # Check if we need to write the annotations to a CSV file
 if annotations_csv:
     print("Writing annotations to CSV file")
@@ -154,8 +202,6 @@ if annotations_csv:
 
 if annotations_json:
     print("Writing annotations to JSON file")
-    # Also write a file mapping all URIs to labels in JSON format
-    json_data = export_json(URIs)
 
     # Write the JSON data to a file
     with open("annotations.json", "w") as file:
@@ -163,4 +209,4 @@ if annotations_json:
 
 # Output the JSON to the console if we're not writing it to any file
 if not annotations_csv and not annotations_json:
-    print(json.dumps(export_json(URIs), indent=4))
+    print(json.dumps(json_data, indent=4))

@@ -1,790 +1,1054 @@
 [
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_108",
-        "label": "Uitvoeren ondersteunende Capabilities"
+        "label": "Uitvoeren ondersteunende Capabilities",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_114",
-        "label": "Bewaking"
+        "label": "Bewaking",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_2",
-        "label": "Richten en plannen"
+        "label": "Richten en plannen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_26",
-        "label": "Uitvoeren"
+        "label": "Uitvoeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_7",
-        "label": "Besluitvorming"
+        "label": "Besluitvorming",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_8",
-        "label": "Samenwerkingsvorming"
+        "label": "Samenwerkingsvorming",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_86",
-        "label": "Nazorgen"
+        "label": "Nazorgen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/business_capabilities/concept_91",
-        "label": "Beheren en ontwikkelen"
+        "label": "Beheren en ontwikkelen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_10",
-        "label": "Archief"
+        "label": "Archief",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_11",
-        "label": "Sport"
+        "label": "Sport",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_12",
-        "label": "Bibliotheek"
+        "label": "Bibliotheek",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_13",
-        "label": "Evenement"
+        "label": "Evenement",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_16",
-        "label": "Horeca"
+        "label": "Horeca",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_18",
-        "label": "Monumenten"
+        "label": "Monumenten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_20",
-        "label": "Mobilteit en openbare werken"
+        "label": "Mobilteit en openbare werken",
+        "children": [
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_21",
+                "label": "Parkeren"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_28",
+                "label": "Openbare weg en pleinen"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_29",
+                "label": "Nutsvoorzieningen"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_30",
+                "label": "Mobiliteit"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_34",
+                "label": "Straatnaamgeving"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_35",
+                "label": "Straatverlichting"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_36",
+                "label": "Wegenregister"
+            }
+        ]
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_21",
-        "label": "Parkeren"
+        "label": "Parkeren",
+        "children": [
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_22",
+                "label": "Bewonersparkeren"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_23",
+                "label": "Park and ride"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_24",
+                "label": "Parkeergarages"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_25",
+                "label": "Parkeerretributies en parkeerboetes"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_26",
+                "label": "Straatparkeren"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_27",
+                "label": "Vergunningen"
+            }
+        ]
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_26",
-        "label": "Straatparkeren"
+        "label": "Straatparkeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_28",
-        "label": "Openbare weg en pleinen"
+        "label": "Openbare weg en pleinen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_29",
-        "label": "Nutsvoorzieningen"
+        "label": "Nutsvoorzieningen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_30",
-        "label": "Mobiliteit"
+        "label": "Mobiliteit",
+        "children": [
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_31",
+                "label": "Autodelen of fietsdelen"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_32",
+                "label": "Verkeerveiligheid"
+            },
+            {
+                "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_33",
+                "label": "Openbaar vervoer"
+            }
+        ]
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_31",
-        "label": "Autodelen of fietsdelen"
+        "label": "Autodelen of fietsdelen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_34",
-        "label": "Straatnaamgeving"
+        "label": "Straatnaamgeving",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_36",
-        "label": "Wegenregister"
+        "label": "Wegenregister",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_37",
-        "label": "Jeugd"
+        "label": "Jeugd",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_38",
-        "label": "Onderwijs"
+        "label": "Onderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_42",
-        "label": "Werken en ondernemen"
+        "label": "Werken en ondernemen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_44",
-        "label": "Ondernemen"
+        "label": "Ondernemen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_45",
-        "label": "Sociale tewerkstelling"
+        "label": "Sociale tewerkstelling",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_46",
-        "label": "Groen en milieu"
+        "label": "Groen en milieu",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_48",
-        "label": "Speelterreinen, parken en groenzones"
+        "label": "Speelterreinen, parken en groenzones",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_50",
-        "label": "Groenonderhoud"
+        "label": "Groenonderhoud",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_51",
-        "label": "Dieren"
+        "label": "Dieren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_52",
-        "label": "Milieuhinder"
+        "label": "Milieuhinder",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_53",
-        "label": "Klimaat en energie"
+        "label": "Klimaat en energie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_54",
-        "label": "Wonen en (ver)bouwen"
+        "label": "Wonen en (ver)bouwen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_55",
-        "label": "Ruimtelijke planning"
+        "label": "Ruimtelijke planning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_56",
-        "label": "Inname publieke ruimte"
+        "label": "Inname publieke ruimte",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_57",
-        "label": "Wonen"
+        "label": "Wonen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_61",
-        "label": "Studentenhuisvesting"
+        "label": "Studentenhuisvesting",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_63",
-        "label": "Omgevingsvergunning"
+        "label": "Omgevingsvergunning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_64",
-        "label": "Samenleven, welzijn en gezondheid"
+        "label": "Samenleven, welzijn en gezondheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_65",
-        "label": "Hulpverlening"
+        "label": "Hulpverlening",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_66",
-        "label": "Armoede"
+        "label": "Armoede",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_68",
-        "label": "Dak- en thuisloosheid"
+        "label": "Dak- en thuisloosheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_69",
-        "label": "Gezondheid"
+        "label": "Gezondheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_70",
-        "label": "Openbare orde en veiligheid"
+        "label": "Openbare orde en veiligheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_71",
-        "label": "Stadsbestuur"
+        "label": "Stadsbestuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_74",
-        "label": "Bestuur en beleid"
+        "label": "Bestuur en beleid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_75",
-        "label": "Overheidsopdrachten"
+        "label": "Overheidsopdrachten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_78",
-        "label": "Stadseigendommen en infrastructuur"
+        "label": "Stadseigendommen en infrastructuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_79",
-        "label": "Werken bij Groep Gent"
+        "label": "Werken bij Groep Gent",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_8",
-        "label": "Cultuur, sport en vrije tijd"
+        "label": "Cultuur, sport en vrije tijd",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_80",
-        "label": "Projecten"
+        "label": "Projecten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_81",
-        "label": "Financieel beheer"
+        "label": "Financieel beheer",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_83",
-        "label": "Internationale relaties"
+        "label": "Internationale relaties",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_85",
-        "label": "Erediensten"
+        "label": "Erediensten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_87",
-        "label": "Subsidies en premies"
+        "label": "Subsidies en premies",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_88",
-        "label": "Verenigingsondersteuning en erkenning"
+        "label": "Verenigingsondersteuning en erkenning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_89",
-        "label": "Regelgeving"
+        "label": "Regelgeving",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/decision_making_themes/concept_9",
-        "label": "Musea"
+        "label": "Musea",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/135",
-        "label": "dieren"
+        "label": "dieren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/150",
-        "label": "monumenten"
+        "label": "monumenten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/164",
-        "label": "groen"
+        "label": "groen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/169",
-        "label": "milieuhinder"
+        "label": "milieuhinder",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/184",
-        "label": "nutsvoorzieningen"
+        "label": "nutsvoorzieningen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/188",
-        "label": "onderwijs"
+        "label": "onderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/194",
-        "label": "kinderopvang"
+        "label": "kinderopvang",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/200",
-        "label": "bestuur en beleid"
+        "label": "bestuur en beleid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/201",
-        "label": "participatie"
+        "label": "participatie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/205",
-        "label": "internationaal"
+        "label": "internationaal",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/209",
-        "label": "stadseigendommen en infrastructuur"
+        "label": "stadseigendommen en infrastructuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/211",
-        "label": "ICT"
+        "label": "ICT",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/213",
-        "label": "belastingen stad"
+        "label": "belastingen stad",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/219",
-        "label": "financieel"
+        "label": "financieel",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/231",
-        "label": "werken bij Groep Gent"
+        "label": "werken bij Groep Gent",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/232",
-        "label": "doelgroep"
+        "label": "doelgroep",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/235",
-        "label": "samenlevingsproblemen"
+        "label": "samenlevingsproblemen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/252",
-        "label": "hulpverlening"
+        "label": "hulpverlening",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/265",
-        "label": "veiligheid en preventie"
+        "label": "veiligheid en preventie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/269",
-        "label": "toegankelijkheid"
+        "label": "toegankelijkheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/270",
-        "label": "ondernemen"
+        "label": "ondernemen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/274",
-        "label": "werk"
+        "label": "werk",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/284",
-        "label": "sociaal en aangepast wonen"
+        "label": "sociaal en aangepast wonen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/302",
-        "label": "attesten en vergunningen"
+        "label": "attesten en vergunningen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/303",
-        "label": "ruimtelijke planning"
+        "label": "ruimtelijke planning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/309",
-        "label": "online afspraken Burgerzaken"
+        "label": "online afspraken Burgerzaken",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/310",
-        "label": "milieu"
+        "label": "milieu",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/319",
-        "label": "overheidsopdrachten"
+        "label": "overheidsopdrachten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/327",
-        "label": "dienstverlening"
+        "label": "dienstverlening",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/331",
-        "label": "referentieadres"
+        "label": "referentieadres",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/37",
-        "label": "bibliotheek"
+        "label": "bibliotheek",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/38",
-        "label": "archief"
+        "label": "archief",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/424",
-        "label": "sport"
+        "label": "sport",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/485",
-        "label": "Blaarmeersen"
+        "label": "Blaarmeersen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/49",
-        "label": "activiteiten"
+        "label": "activiteiten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/50",
-        "label": "kunst en cultuur"
+        "label": "kunst en cultuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/54",
-        "label": "evenement"
+        "label": "evenement",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/56",
-        "label": "informatie over evenement"
+        "label": "informatie over evenement",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/58",
-        "label": "mobiliteit"
+        "label": "mobiliteit",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/64",
-        "label": "Gentse Feesten"
+        "label": "Gentse Feesten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/66",
-        "label": "jeugd"
+        "label": "jeugd",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/71",
-        "label": "inname publieke ruimte"
+        "label": "inname publieke ruimte",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/74",
-        "label": "openbare weg en pleinen"
+        "label": "openbare weg en pleinen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/77",
-        "label": "delen van auto of fiets"
+        "label": "delen van auto of fiets",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/82",
-        "label": "parkeren"
+        "label": "parkeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/gent_words/83",
-        "label": "straatparkeren"
+        "label": "straatparkeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_101",
-        "label": "Kinderopvang"
+        "label": "Kinderopvang",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_102",
-        "label": "Stad met bestuurskracht"
+        "label": "Stad met bestuurskracht",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_103",
-        "label": "Politieke organen"
+        "label": "Politieke organen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_104",
-        "label": "Secretariaat"
+        "label": "Secretariaat",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_105",
-        "label": "Fiscale en financi\u00eble diensten"
+        "label": "Fiscale en financi\u00eble diensten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_106",
-        "label": "Personeelsdienst en vorming"
+        "label": "Personeelsdienst en vorming",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_107",
-        "label": "Archief"
+        "label": "Archief",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_108",
-        "label": "Organisatiebeheersing"
+        "label": "Organisatiebeheersing",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_110",
-        "label": "Overige algemene diensten"
+        "label": "Overige algemene diensten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_112",
-        "label": "Internationale relaties"
+        "label": "Internationale relaties",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_113",
-        "label": "Gemeentelijk/stedelijk wijkoverleg"
+        "label": "Gemeentelijk/stedelijk wijkoverleg",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_114",
-        "label": "Overig algemeen bestuur"
+        "label": "Overig algemeen bestuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_115",
-        "label": "Erediensten"
+        "label": "Erediensten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_12",
-        "label": "Bestuurlijke preventie (incl.GAS)"
+        "label": "Bestuurlijke preventie (incl.GAS)",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_13",
-        "label": "Overige elementen van openbare orde en veiligheid"
+        "label": "Overige elementen van openbare orde en veiligheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_14",
-        "label": "Sociale bijstand"
+        "label": "Sociale bijstand",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_15",
-        "label": "Integratie van personen met vreemde herkomst"
+        "label": "Integratie van personen met vreemde herkomst",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_17",
-        "label": "Activering van tewerkstelling"
+        "label": "Activering van tewerkstelling",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_19",
-        "label": "Overige verrichtingen inzake sociaal beleid"
+        "label": "Overige verrichtingen inzake sociaal beleid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_20",
-        "label": "Diensten en voorzieningen voor personen met een handicap"
+        "label": "Diensten en voorzieningen voor personen met een handicap",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_21",
-        "label": "Sociale huisvesting"
+        "label": "Sociale huisvesting",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_24",
-        "label": "Assistentiewoningen"
+        "label": "Assistentiewoningen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_27",
-        "label": "Overige verrichtingen betreffende ouderen"
+        "label": "Overige verrichtingen betreffende ouderen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_29",
-        "label": "Gezondheidspromotie en ziektepreventie"
+        "label": "Gezondheidspromotie en ziektepreventie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_31",
-        "label": "Overige dienstverlening inzake volksgezondheid"
+        "label": "Overige dienstverlening inzake volksgezondheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_32",
-        "label": "Woonstad en ruimte"
+        "label": "Woonstad en ruimte",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_33",
-        "label": "Wegen"
+        "label": "Wegen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_34",
-        "label": "Openbaar vervoer"
+        "label": "Openbaar vervoer",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_35",
-        "label": "Parkeren"
+        "label": "Parkeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_36",
-        "label": "Overige mobiliteit en verkeer"
+        "label": "Overige mobiliteit en verkeer",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_39",
-        "label": "Beheer van regen\u2010 en afvalwater"
+        "label": "Beheer van regen\u2010 en afvalwater",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_4",
-        "label": "Financi\u00eble aangelegenheden"
+        "label": "Financi\u00eble aangelegenheden",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_42",
-        "label": "Overige vermindering van milieuverontreiniging"
+        "label": "Overige vermindering van milieuverontreiniging",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_43",
-        "label": "Aankoop, inrichting en beheer van natuur, groen en bos"
+        "label": "Aankoop, inrichting en beheer van natuur, groen en bos",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_45",
-        "label": "Klimaat en energie"
+        "label": "Klimaat en energie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_46",
-        "label": "Participatie en sensibilisatie"
+        "label": "Participatie en sensibilisatie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_47",
-        "label": "Ge\u00efntegreerde milieuprojecten"
+        "label": "Ge\u00efntegreerde milieuprojecten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_48",
-        "label": "Overige milieubescherming"
+        "label": "Overige milieubescherming",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_49",
-        "label": "Dierenbescherming"
+        "label": "Dierenbescherming",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_50",
-        "label": "Ruimtelijke planning"
+        "label": "Ruimtelijke planning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_51",
-        "label": "Gebiedsontwikkeling"
+        "label": "Gebiedsontwikkeling",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_55",
-        "label": "Overig woonbeleid"
+        "label": "Overig woonbeleid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_57",
-        "label": "Elektriciteitsvoorziening"
+        "label": "Elektriciteitsvoorziening",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_58",
-        "label": "Gasvoorziening"
+        "label": "Gasvoorziening",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_6",
-        "label": "Patrimonium zonder maatschappelijk doel"
+        "label": "Patrimonium zonder maatschappelijk doel",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_60",
-        "label": "Groene ruimte"
+        "label": "Groene ruimte",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_61",
-        "label": "Monumentenzorg"
+        "label": "Monumentenzorg",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_62",
-        "label": "Begraafplaatsen"
+        "label": "Begraafplaatsen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_64",
-        "label": "Handel en middenstand"
+        "label": "Handel en middenstand",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_65",
-        "label": "Nijverheid"
+        "label": "Nijverheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_67",
-        "label": "Werkgelegenheid"
+        "label": "Werkgelegenheid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_68",
-        "label": "Overige economische zaken"
+        "label": "Overige economische zaken",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_69",
-        "label": "Lerende en culturele stad"
+        "label": "Lerende en culturele stad",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_70",
-        "label": "Toerisme \u2010 Onthaal en promotie"
+        "label": "Toerisme \u2010 Onthaal en promotie",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_71",
-        "label": "Toerisme \u2010 Sectorondersteuning"
+        "label": "Toerisme \u2010 Sectorondersteuning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_72",
-        "label": "Overige activiteiten inzake toerisme"
+        "label": "Overige activiteiten inzake toerisme",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_75",
-        "label": "Openbare bibliotheken"
+        "label": "Openbare bibliotheken",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_76",
-        "label": "Overige culturele instellingen"
+        "label": "Overige culturele instellingen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_77",
-        "label": "Feesten en plechtigheden"
+        "label": "Feesten en plechtigheden",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_78",
-        "label": "Overige evenementen"
+        "label": "Overige evenementen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_8",
-        "label": "Welzijn en samenleven"
+        "label": "Welzijn en samenleven",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_80",
-        "label": "Overig beleid inzake het erfgoed"
+        "label": "Overig beleid inzake het erfgoed",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_81",
-        "label": "Overig kunst\u2010 en cultuurbeleid"
+        "label": "Overig kunst\u2010 en cultuurbeleid",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_82",
-        "label": "Sportsector\u2010 en verenigingsondersteuning"
+        "label": "Sportsector\u2010 en verenigingsondersteuning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_83",
-        "label": "Sportinfrastructuur"
+        "label": "Sportinfrastructuur",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_84",
-        "label": "Jeugdsector\u2010 en verenigingsondersteuning"
+        "label": "Jeugdsector\u2010 en verenigingsondersteuning",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_85",
-        "label": "Gemeentelijke dienstverlening gericht op kinderen & jongeren"
+        "label": "Gemeentelijke dienstverlening gericht op kinderen & jongeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_86",
-        "label": "nfrastructuur en faciliteiten ten behoeve van kinderen en jongeren"
+        "label": "nfrastructuur en faciliteiten ten behoeve van kinderen en jongeren",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_87",
-        "label": "Gewoon basisonderwijs"
+        "label": "Gewoon basisonderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_88",
-        "label": "Buitengewoon basisonderwijs"
+        "label": "Buitengewoon basisonderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_89",
-        "label": "Gewoon secundair onderwijs"
+        "label": "Gewoon secundair onderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_9",
-        "label": "Politiediensten"
+        "label": "Politiediensten",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_91",
-        "label": "Buitengewoon secundair onderwijs"
+        "label": "Buitengewoon secundair onderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_92",
-        "label": "Deeltijds kunstonderwijs"
+        "label": "Deeltijds kunstonderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_93",
-        "label": "Centra voor volwassenenonderwijs"
+        "label": "Centra voor volwassenenonderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_95",
-        "label": "Centra voor leerlingenbegeleiding"
+        "label": "Centra voor leerlingenbegeleiding",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_97",
-        "label": "Overige ondersteunende diensten voor het onderwijs"
+        "label": "Overige ondersteunende diensten voor het onderwijs",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_98",
-        "label": "Sociale voordelen"
+        "label": "Sociale voordelen",
+        "children": []
     },
     {
         "uri": "http://stad.gent/id/concepts/policy_domains_themes/concept_99",
-        "label": "Ondersteunende diensten voor het algemeen onderwijsbeleid"
+        "label": "Ondersteunende diensten voor het algemeen onderwijsbeleid",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/10",
-        "label": "huwen, samenwonen en scheiden"
+        "label": "huwen, samenwonen en scheiden",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/13",
-        "label": "legalisatie"
+        "label": "legalisatie",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/14",
-        "label": "migratie"
+        "label": "migratie",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/15",
-        "label": "overlijden"
+        "label": "overlijden",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/16",
-        "label": "rijden"
+        "label": "rijden",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/17",
-        "label": "uittreksel"
+        "label": "uittreksel",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/19",
-        "label": "verkiezingen"
+        "label": "verkiezingen",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/22",
-        "label": "over Gent en het stadsbestuur"
+        "label": "over Gent en het stadsbestuur",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/23",
-        "label": "cultuur, sport en vrije tijd"
+        "label": "cultuur, sport en vrije tijd",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/24",
-        "label": "mobiliteit en openbare werken"
+        "label": "mobiliteit en openbare werken",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/29",
-        "label": "shoppen en toerisme"
+        "label": "shoppen en toerisme",
+        "children": []
     },
     {
         "uri": "https://stad.gent/id/concepts/gent_words/6",
-        "label": "identiteit en verhuizen"
+        "label": "identiteit en verhuizen",
+        "children": []
     }
 ]

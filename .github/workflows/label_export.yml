@@ -1,0 +1,38 @@
+name: Export labels
+
+on:
+  push:
+    branches:
+      - master
+    paths: 
+      - '.github/workflows/label_export.yml'
+      - 'label_export/export_annotations.py'
+  pull_request: 
+    paths: 
+      - '.github/workflows/label_export.yml'
+      - 'label_export/export_annotations.py'
+
+jobs:
+    export_labels:
+        runs-on: ubuntu-latest
+        name: Export labels
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4
+          - name: Set up Python
+            uses: actions/setup-python@v5.1.1
+            with:
+              python-version: '3.x'
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install 
+            working-directory: ./label_export
+          - name: Export labels
+            run: python ./export_annotations.py
+            working-directory: ./label_export
+          - name: Upload labels JSON
+            uses: actions/upload-artifact@v4.3.4
+            with:
+              name: labels
+              path: ./label_export/annotations.json
