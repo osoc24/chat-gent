@@ -3,7 +3,7 @@ name: Export labels
 on:
   push:
     branches:
-      - master
+      - main
     paths: 
       - '.github/workflows/label_export.yml'
       - 'label_export/export_annotations.py'
