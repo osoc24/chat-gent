@@ -71,7 +71,7 @@
 		height: 50rem;
 		position: absolute;
 		z-index: -1;
-		background-image: url("$lib/assets/osoc/osoc-emblem.png");
+		background-image: url("$lib/assets/osoc-emblem.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		right: -25rem;

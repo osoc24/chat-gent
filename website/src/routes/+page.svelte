@@ -1,15 +1,10 @@
 <script lang="ts">
     import "../app.css";
 
-    import osocLogo from "$lib/assets/osoc/osoc-logo.svg";
+    import osocLogo from "$lib/assets/osoc-logo.svg";
 
-    import photoJoannaKalisz from "$lib/assets/photos/joanna-kalisz.jpg";
-    import photoRobinVanDerLinde from "$lib/assets/photos/robin-van-der-linde.jpg";
-    import photoDinaBoshnaq from "$lib/assets/photos/dina-boshnaq.jpg";
-    import photoChristopheLeroy from "$lib/assets/photos/christophe-leroy.jpg";
-
-    import ghentLogo from "$lib/assets/logos/logo-gent.svg";
-    import district09Logo from "$lib/assets/logos/logo-district09.svg";
+    import ghentLogo from "$lib/assets/logo-gent.svg";
+    import district09Logo from "$lib/assets/logo-district09.svg";
 </script>
 
 <svelte:head>
@@ -144,9 +139,9 @@
             <li class="row middle-xs">
               <div class="col-xs-3">
                 <a href="https://www.linkedin.com/in/joanna-j-kalisz/" target="_blank"
-                  ><img
+                  ><enhanced:img
                     class="round"
-                    src={photoJoannaKalisz}
+                    src="/static/photos/joanna-kalisz.jpg"
                     alt="Joanna Kalisz"
                 /></a>
               </div>
@@ -171,9 +166,9 @@
             <li class="row middle-xs">
               <div class="col-xs-3">
                 <a href="https://rlin.eu/" target="_blank"
-                  ><img
+                  ><enhanced:img
                     class="round"
-                    src={photoRobinVanDerLinde}
+                    src="/static/photos/robin-van-der-linde.jpg"
                     alt="Robin van der Linde"
                 /></a>
               </div>
@@ -204,9 +199,9 @@
             <li class="row middle-xs">
               <div class="col-xs-3">
                 <a href="https://www.linkedin.com/in/dina-boshnaq" target="_blank"
-                  ><img
+                  ><enhanced:img
                     class="round"
-                    src={photoDinaBoshnaq}
+                    src="/static/photos/dina-boshnaq.jpg"
                     alt="Dina Boshnaq"
                 /></a>
               </div>
@@ -244,9 +239,9 @@
                 <a
                   href="https://www.linkedin.com/in/kyngstudio/"
                   target="_blank"
-                  ><img
+                  ><enhanced:img
                     class="round"
-                    src="{photoChristopheLeroy}"
+                    src="/static/photos/christophe-leroy.jpg"
                     alt="Christophe Leroy"
                 /></a>
               </div>
