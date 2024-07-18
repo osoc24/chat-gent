@@ -6,12 +6,11 @@ on:
       - "main"
     paths:
         - "website/**"
+        - ".github/workflows/website_ci.yml"
   pull_request:
-    paths-ignore:
-      - "**.md"
-      - ".vscode/"
     paths:
         - "website/**"
+        - ".github/workflows/website_ci.yml"
 
 jobs:
   build:
