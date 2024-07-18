@@ -1,0 +1,37 @@
+name: Deploy Project Template
+
+on:
+  push:
+    branches: [main]
+    paths:
+        - "website/**"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          check-latest: true
+
+      - name: Install NPM package
+        run: npm install
+        working-directory: website
+
+      - name: Build website
+        run: npm run build
+        working-directory: website
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.6.0
+        with:
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: "website/build" # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
+        

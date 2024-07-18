@@ -1,0 +1,11 @@
+/* Main OSoC stuff */
+@import url('./css/main.css');
+@import url('./css/typography.css');
+@import url('./css/header.css');
+@import url('./css/footer.css');
+@import url('./css/project.css');
+@import url('./css/flexboxgrid.css');
+@import url('./css/buttons.css');
+
+/* Font Awesome */
+@import url('@fortawesome/fontawesome-free/css/all.css');
