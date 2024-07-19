@@ -9,6 +9,15 @@
 
 <svelte:head>
     <meta name="description" content="ChatGent"/>
+    <meta name="author" content="ChatGent team, Open Summer of Code 2024"/>
+    <meta name="keywords" content="ChatGent, Open Summer of Code, osoc24, osoc2024, Ghent, District09"/>
+
+    <title>ChatGent project</title>
+
+    <meta property="og:title" content="ChatGent project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://osoc24.github.io/chat-gent/" />
+    <meta property="og:description" content="Making decisions accessible" />
 </svelte:head>
 
 <div class="layout">
