@@ -5,6 +5,7 @@
 
 	import ghentLogo from '$lib/assets/logo-gent.svg';
 	import district09Logo from '$lib/assets/logo-district09.svg';
+	import SocialButton from '$lib/components/SocialButton.svelte';
 </script>
 
 <svelte:head>
@@ -83,15 +84,15 @@
 			</div>
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-lg-6 col-md-offset-1">
 				<div class="project-image">
-          <enhanced:img src="/static/img2.jpg" alt="Smart Search" />
-        </div>
+					<enhanced:img src="/static/img2.jpg" alt="Smart Search" />
+				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 col-lg-6">
 				<div class="project-image">
-          <enhanced:img src="/static/img3.jpg" alt="ChatGent interface" />
-        </div>
+					<enhanced:img src="/static/img3.jpg" alt="ChatGent interface" />
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-lg-5 col-md-offset-1">
 				<p>
@@ -134,7 +135,7 @@
 				<ul class="team">
 					<li class="row middle-xs">
 						<div class="col-xs-3">
-							<a href="https://www.linkedin.com/in/joanna-j-kalisz/" target="_blank"
+							<a href="https://joannakalisz.be/" target="_blank"
 								><enhanced:img
 									class="round"
 									src="/static/photos/joanna-kalisz.jpg"
@@ -144,17 +145,13 @@
 						</div>
 						<div class="col-xs-9 col-md-8 col-lg-8 col-md-offset-1">
 							<h4 class="h6">
-								<a href="https://www.linkedin.com/in/joanna-j-kalisz/" target="_blank"
-									>Joanna Kalisz</a
-								>
+								<a href="https://joannakalisz.be/" target="_blank">Joanna Kalisz</a>
 							</h4>
 							<p>Designer</p>
 							<div class="social">
-								<a href="https://www.linkedin.com/in/joanna-j-kalisz/" target="_blank"
-									><i class="fab fa-linkedin-in"></i></a
-								><a href="https://github.com/jane-00" target="_blank"
-									><i class="fab fa-github"></i></a
-								>
+								<SocialButton type="linkedin" url="https://www.linkedin.com/in/joanna-j-kalisz/" />
+								<SocialButton type="github" url="https://github.com/jane-00" />
+								<SocialButton type="website" url="https://joannakalisz.be/" />
 							</div>
 						</div>
 					</li>
@@ -174,15 +171,10 @@
 							</h4>
 							<p>Developer</p>
 							<div class="social">
-								<a href="https://en.osm.town/@RLin" target="_blank"
-									><i class="fab fa-mastodon"></i></a
-								>
-								<a href="https://www.linkedin.com/in/RLinEU/" target="_blank"
-									><i class="fab fa-linkedin-in"></i></a
-								><a href="https://github.com/RobinLinde" target="_blank"
-									><i class="fab fa-github"></i></a
-								>
-								<a href="https://rlin.eu/" target="_blank"> <i class="fas fa-globe"></i></a>
+								<SocialButton type="mastodon" url="https://en.osm.town/@RLin" />
+								<SocialButton type="linkedin" url="https://www.linkedin.com/in/RLinEU/" />
+								<SocialButton type="github" url="https://github.com/RobinLinde" />
+								<SocialButton type="website" url="https://rlin.eu/" />
 							</div>
 						</div>
 					</li>
@@ -202,15 +194,9 @@
 							</h4>
 							<p>Developer</p>
 							<div class="social">
-								<a href="https://www.linkedin.com/in/dina-boshnaq" target="_blank"
-									><i class="fab fa-linkedin-in"></i></a
-								>
-								<a href="https://github.com/16dina" target="_blank"
-									><i class="fab fa-github"></i>
-								</a>
-								<a href="https://www.pexels.com/@dina-boshnaq-123876169" target="_blank"
-									><i class="fas fa-camera"></i>
-								</a>
+								<SocialButton type="linkedin" url="https://www.linkedin.com/in/dina-boshnaq" />
+								<SocialButton type="github" url="https://github.com/16dina" />
+								<SocialButton type="picture" url="https://www.pexels.com/@dina-boshnaq-123876169" />
 							</div>
 						</div>
 					</li>
@@ -236,9 +222,7 @@
 							</h4>
 							<p>Coach</p>
 							<div class="social">
-								<a href="https://www.linkedin.com/in/kyngstudio/" target="_blank"
-									><i class="fab fa-linkedin-in"></i></a
-								>
+								<SocialButton type="linkedin" url="https://www.linkedin.com/in/kyngstudio/" />
 							</div>
 						</div>
 					</li>

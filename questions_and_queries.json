@@ -1,0 +1,6 @@
+[
+    {
+        "user_question": "Wat zijn de 5 meest recente beslissingen over parkeerplaatsen voor elektrische auto's?",
+        "sparql_query": "PREFIX eli: <http://data.europa.eu/eli/ontology#> \n SELECT * \n WHERE { \n  ?entity eli:title ?title; \n eli:date_publication ?date. \n filter contains(?title, \"parkeerplaats voorbehouden voor elektrische voertuigen\") \n }\n ORDER BY DESC(?date) \n LIMIT 5"
+    }
+]

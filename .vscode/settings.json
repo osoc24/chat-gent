@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "json.schemas": [
+    {
+      "fileMatch": ["questions_and_queries.json"],
+      "schema": {
+        "type": "array",
+        "title": "Example questions and SPARQL queries",
+        "items": {
+          "type": "object",
+          "title": "Example",
+          "properties": {
+            "user_question": {
+              "type": "string",
+              "description": "Question of the user"
+            },
+            "sparql_query": {
+              "type": "string",
+              "description": "Corresponding SPARQL query"
+            }
+          },
+          "required": ["user_question", "sparql_query"]
+        }
+      }
+    }
+  ]
+}
