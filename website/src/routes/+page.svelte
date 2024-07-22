@@ -321,7 +321,7 @@
           <div class="col-xs-6 col-sm-8 col-md-9 col-lg-10">
             <p>
               Made with love at
-              <a href="https://osoc.be/editions/2024" target="_blank"
+              <a href="https://osoc.be/editions" target="_blank"
                 >osoc&nbsp;2024</a
               >
             </p>
