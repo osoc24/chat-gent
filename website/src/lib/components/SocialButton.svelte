@@ -27,6 +27,20 @@
 		margin-right: 0.6rem;
 	}
 
+	i {
+		font-size: 1.5rem;
+
+		&.fa-linkedin-in {
+			position: relative;
+			left: 0.02rem;
+		}
+
+		&.fa-camera {
+			position: relative;
+			top: -0.05rem;
+		}
+	}
+
 	a:hover {
 		background-color: #fcb70f;
 	}
