@@ -29,4 +29,4 @@ npm run build
 npm run preview
 ```
 
-This will build the website and serve it locally at [http://localhost:5173](http://localhost:5173).
+This will build the website and serve it locally at [http://localhost:4173](http://localhost:4173).
