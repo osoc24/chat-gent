@@ -47,3 +47,7 @@ erDiagram
         string prefLabel "Human-readable label"
     }
 ```
+
+## Automation
+
+This tool is run automatically every sunday at 03:00 AM. The tool will then query all annotations and labels from PROBE and export them to a CSV and JSON file, and push them to the repository.
