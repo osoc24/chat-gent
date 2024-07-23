@@ -1,1 +1,0 @@
-# Forntend Prototype - StreamLit
