@@ -1,38 +1,32 @@
-# create-svelte
+# ChatGent Project Description Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This folder contains the source code for the ChatGent project description website. The website is a simple static website that gives some information about the project and the team behind it.
 
-## Creating a project
+The website is deployed over on [https://osoc24.github.io/chat-gent](https://osoc24.github.io/chat-gent).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How to run
+
+First install the dependencies:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Then run the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+The website will be available at [http://localhost:5173](http://localhost:5173).
 
-To create a production version of your app:
+## How to deploy
+
+The website is automatically deployed to [GitHub Pages](https://osoc24.github.io/chat-gent) using GitHub Actions. To manually test the deployment, run:
 
 ```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This will build the website and serve it locally at [http://localhost:5173](http://localhost:5173).
