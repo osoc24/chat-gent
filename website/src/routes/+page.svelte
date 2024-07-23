@@ -203,7 +203,7 @@
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-5 col-lg-5 col-lg-offset-2">
-				<h3 class="h5">The coaches</h3>
+				<h3 class="h5">The coach</h3>
 				<ul class="team">
 					<li class="row middle-xs">
 						<div class="col-xs-3">
@@ -217,7 +217,8 @@
 						</div>
 						<div class="col-xs-9 col-md-8 col-lg-8 col-md-offset-1">
 							<h4 class="h6">
-								<a href="https://www.linkedin.com/in/kyngstudio/" target="_blank">Cristophe Leroy</a
+								<a href="https://www.linkedin.com/in/kyngstudio/" target="_blank"
+									>Christophe Leroy</a
 								>
 							</h4>
 							<p>Coach</p>
