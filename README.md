@@ -10,7 +10,7 @@ This project was developed during Open Summer of Code 2024, for more information
 
 This repository contains a few different things:
 
--[label export tool](./label_export/README.md) - a tool that export all used labels from the PROBE project
--[notebooks](./notebooks) - a collection of Jupyter notebooks that were used during the project
--[website](./website) - the source code for the ChatGent website
--[streamlit app](./app.py) - the source code for the ChatGent streamlit app
+- [label export tool](./label_export/README.md) - a tool that export all used labels from the PROBE project
+- [notebooks](./notebooks) - a collection of Jupyter notebooks that were used during the project
+- [website](./website) - the source code for the ChatGent website
+- [streamlit app](./app.py) - the source code for the ChatGent streamlit app
