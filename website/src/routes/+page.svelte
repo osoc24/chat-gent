@@ -222,7 +222,7 @@
 							<a href="https://www.linkedin.com/in/kyngstudio/" target="_blank"
 								><enhanced:img
 									class="round"
-									src="/static/photos/christophe-leroy.jpg"
+									src="/static/photos/chris-leroy.jpg"
 									alt="Christophe Leroy"
 								/></a
 							>
