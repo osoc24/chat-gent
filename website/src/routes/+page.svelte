@@ -34,7 +34,11 @@
 							<h1 class="h1 hero-title">ChatGent Project</h1>
 						</div>
 						<div class="col-xs-12 col-sm-8 col-md-7 col-lg-7">
-							<p class="hero-intro">Making decisions accessible</p>
+							<p class="hero-intro">
+								Contributing to District09, the digital agency of the city of Ghent, we aim to make
+								the local government decisions, initiatives and updates easily searchable for the
+								residents of Ghent, while implementing a chatbot-like approach.
+							</p>
 						</div>
 						<div class="col-xs-12 col-sm-10 col-md-7 col-lg-8">
 							<div class="button-group">
