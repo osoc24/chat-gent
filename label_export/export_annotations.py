@@ -3,24 +3,41 @@ This script tries to export all annotations from the probe.stad.gent SPARQL endp
 
 The idea is to use this CSV file as context when using an LLM to write queries for the probe.stad.gent SPARQL endpoint.
 '''
+import os
 from SPARQLWrapper import SPARQLWrapper, JSON
 from tqdm import tqdm
 import json
+from dotenv import load_dotenv
+import argparse
 
 # Config variables
 
+# Load in environment variables
+load_dotenv()
+
+# Load in command line arguments
+arg_parser = argparse.ArgumentParser(description="Export annotations from the probe.stad.gent SPARQL endpoint and get the corresponding labels from the stad.gent SPARQL endpoint")
+arg_parser.add_argument("--probe-endpoint", help="The SPARQL endpoint for the probe.stad.gent SPARQL endpoint")
+arg_parser.add_argument("--stadgent-endpoint", help="The SPARQL endpoint for the stad.gent SPARQL endpoint")
+arg_parser.add_argument("--annotations-csv", help="The file to write the annotations to in CSV format, set to false to disable")
+arg_parser.add_argument("--annotations-json", help="The file to write the annotations to in JSON format, set to false to disable")
+arg_parser.add_argument("--test-mode", help="Whether to run this in test mode, AKA only get the first batch of annotations")
+arg_parser.add_argument("--fetch-children", help="Optionally, all narrowers of the concepts can also be retrieved, only works if at least annotations_json is enabled, or if the output is not written to a file")
+args = arg_parser.parse_args()
+
+# Set the config variables, first looking for a command line argument, then for an environment variable, then for a default value
 # SparQL endpoint for the probe.stad.gent SPARQL endpoint
-probe_endpoint = "https://probe.stad.gent/sparql"
+probe_endpoint = args.probe_endpoint if args.probe_endpoint else os.getenv("PROBE_ENDPOINT", "https://probe.stad.gent/sparql")
 # SparQL endpoint for the stad.gent SPARQL endpoint
-stadgent_endpoint = "https://stad.gent/sparql"
+stadgent_endpoint = args.stadgent_endpoint if args.stadgent_endpoint else os.getenv("STADGENT_ENDPOINT", "https://stad.gent/sparql")
 # The file to write the annotations to in CSV format, set to false to disable
-annotations_csv = "annotations.csv"
+annotations_csv = args.annotations_csv if args.annotations_csv else os.getenv("ANNOTATIONS_CSV", "annotations.csv")
 # The file to write the annotations to in JSON format, set to false to disable
-annotations_json = "annotations.json"
+annotations_json = args.annotations_json if args.annotations_json else os.getenv("ANNOTATIONS_JSON", "annotations.json")
 # Whether to run this in test mode, AKA only get the first batch of annotations
-test_mode = False
+test_mode = args.test_mode if args.test_mode else os.getenv("TEST_MODE", False)
 # Optionally, all narrowers of the concepts can also be retrieved, only works if at least annotations_json is enabled, or if the output is not written to a file
-fetch_children = True
+fetch_children = args.fetch_children if args.fetch_children else os.getenv("FETCH_CHILDREN", True)
 
 def escape_commas(string):
     # Check if the string contains a comma
