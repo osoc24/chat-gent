@@ -48,6 +48,33 @@ erDiagram
     }
 ```
 
+## Usage
+
+To run the tool, simply run the following command:
+
+```bash
+python label_export.py
+```
+
+Optionally, parameters can be passed to the script to specify a variety of options:
+
+```bash
+python label_export.py --help
+```
+
+All these parameters can also be set using environment variables or a `.env` file. The following environment variables are supported:
+
+```env
+PROBE_ENDPOINT=https://probe.stad.gent/sparql
+STADGENT_ENDPOINT=https://stad.gent/sparql
+ANNOTATIONS_CSV=annotations.csv
+ANNOTATIONS_JSON=annotations.json
+TEST_MODE=False
+FETCH_CHILDREN=False
+```
+
+All these are also in the [`.env.example`](.env.example) file.
+
 ## Automation
 
 This tool is run automatically every sunday at 03:00 AM. The tool will then query all annotations and labels from PROBE and export them to a CSV and JSON file, and push them to the repository.
