@@ -7,10 +7,12 @@ on:
     paths:
       - ".github/workflows/label_export.yml"
       - "label_export/export_annotations.py"
+      - "label_export/requirements.txt"
   pull_request:
     paths:
       - ".github/workflows/label_export.yml"
       - "label_export/export_annotations.py"
+      - "label_export/requirements.txt"
   # Also run on a schedule, running every sunday at 03:00
   schedule:
     - cron: "0 3 * * 0"
