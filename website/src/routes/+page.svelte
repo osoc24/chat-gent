@@ -79,26 +79,38 @@
 				<p>
 					To make the decisions made by the city of <a href="https://stad.gent/">Ghent</a> more accessible
 					to everyone, we created ChatGent. ChatGent is a proof of concept for a smart search which combines
-					a conventional search with a the concepts of a chat bot.
+					a conventional search with a the concepts of a chat bot. As you can see, the search bar has
+					been replaced with a larger box, allowing users to ask questions in natural language. ChatGent
+					will then use Natural Language Processing to turn a user's question into a SPARQL query. This
+					is done by sending it to the OpenAI API, together with a selection of some of our examples,
+					as well as the labels. This will result in a query which can be used to search through the
+					city's decisions.
 				</p>
 			</div>
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-lg-6 col-md-offset-1">
 				<div class="project-image">
-					<enhanced:img src="/static/img2.jpg" alt="Smart Search" />
+					<enhanced:img src="/static/homepage.png" alt="Proposed Homepage" />
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0 col-lg-6">
 				<div class="project-image">
-					<enhanced:img src="/static/img3.jpg" alt="ChatGent interface" />
+					<enhanced:img src="/static/search.png" alt="Proposed Search Result Page" />
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-lg-5 col-md-offset-1">
 				<p>
-					ChatGent uses Natural Language Processing to turn a user's question into a SPARQL query.
-					It then searches through the city's decisions, returns the most relevant ones and gives a
-					summary of them. Apart from that, it also shows it's sources as results.
+					Then we actually send the query to the city's SPARQL endpoint. This will return a subset
+					of the decisions, which we can use to compile an answer and a summary. This is done by
+					using the OpenAI API again to generate a summary of the decisions. This summary is then
+					displayed to the user, together with all relevant sources as well as any other relevant
+					pages.
+				</p>
+				<p>
+					If you want to take a look at the proof-of-concept we developed, you can find it down
+					below. While this is just a proof-of-concept, we believe that this could be a great way to
+					make decisions more accessible to everyone.
 				</p>
 				<div class="button-group">
 					<a
