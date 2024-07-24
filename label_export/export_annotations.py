@@ -213,7 +213,7 @@ if fetch_children and (annotations_json or not annotations_csv):
 if annotations_csv:
     print("Writing annotations to CSV file")
     # Write a file mapping all URIs to labels
-    with open("annotations.csv", "w") as file:
+    with open(annotations_csv, "w") as file:
         for i in range(len(URIs.values())):
             file.write(list(URIs.keys())[i] + "," + escape_commas(list(URIs.values())[i]) + "\n")
 
@@ -221,7 +221,7 @@ if annotations_json:
     print("Writing annotations to JSON file")
 
     # Write the JSON data to a file
-    with open("annotations.json", "w") as file:
+    with open(annotations_json, "w") as file:
         json.dump(json_data, file, indent=4)
 
 # Output the JSON to the console if we're not writing it to any file
