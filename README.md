@@ -1,5 +1,5 @@
 # ChatGent
-![ChatGent Crest](images/crest-chatgent.png | width=100)
+![ChatGent Crest](images/crest-chatgent.png|width=100)
 
 This repository contains source code and some research and documentation for the ChatGent project
 
