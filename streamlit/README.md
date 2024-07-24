@@ -7,3 +7,12 @@ You can also scan the following QR code to open the app on your phone:
 <img src="../images/qr_code.png" alt="ChatGent app QR code" width="300"/>
 
 Note that it is hosted using a different repository (Dina's personal repository outside of OSOC) due to limited access for 3rd parties such as StreamLit to the OSOC repository. But the code here is the same as the one in that repository.
+
+The following are example prompts that were tested out:
+
+<p align="center">
+  <img src="../images/ChatGent-Demo/example-cultural-centers.jpg" alt="ChatGent app QR code" width="500"/>
+  <img src="../images/ChatGent-Demo/example-english-construction.jpg" alt="ChatGent app QR code" width="500"/>
+  <img src="../images/ChatGent-Demo/example-english-parking.jpg" alt="ChatGent app QR code" width="500"/>
+  <img src="../images/ChatGent-Demo/example-gentse-feesten.jpg" alt="ChatGent app QR code" width="500"/>
+</p>
