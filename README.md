@@ -1,5 +1,5 @@
 # ChatGent
-![ChatGent Crest](images/crest-chatgent.png)
+<img src="images/crest-chatgent.png" alt="ChatGent Crest" width="300"/>
 
 This repository contains source code and some research and documentation for the ChatGent project
 
@@ -15,3 +15,4 @@ This repository contains a few different things:
 - [notebooks](./notebooks) - a collection of Jupyter notebooks that were used during the project
 - [website](./website) - the source code for the ChatGent website
 - [streamlit app](./streamlit) - the source code for the ChatGent streamlit app
+- [json files](./json_files) - example questions and queries file, along with annotations file that contains labels.
