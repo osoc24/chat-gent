@@ -35,8 +35,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r ./requirements.txt
         working-directory: ./label_export
-      - name: Export labels
-        run: python ./export_annotations.py
+      - name: Export labels with children
+        run: python ./export_annotations.py --annotations-csv=False --annotations-json=../json_files/annotations_with_children.json --fetch-children=True
+        working-directory: ./label_export
+      - name: Export labels without children
+        run: python ./export_annotations.py --annotations-csv=False --annotations-json=../json_files/annotations.json --fetch-children=False
         working-directory: ./label_export
       - name: Upload labels JSON
         uses: actions/upload-artifact@v4.3.4
