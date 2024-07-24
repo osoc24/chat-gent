@@ -45,7 +45,12 @@ jobs:
         uses: actions/upload-artifact@v4.3.4
         with:
           name: labels
-          path: ./label_export/annotations.json
+          path: ./json_files/annotations.json
+      - name: Upload labels with children JSON
+        uses: actions/upload-artifact@v4.3.4
+        with:
+          name: labels_with_children
+          path: ./json_files/annotations_with_children.json
       - name: Commit and push changes
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: stefanzweifel/git-auto-commit-action@v5
