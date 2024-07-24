@@ -1,4 +1,5 @@
-# chat-gent
+# ChatGent
+![ChatGent Crest](images/crest-chatgent.png)
 
 This repository contains source code and some research and documentation for the ChatGent project
 
