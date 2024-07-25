@@ -11,8 +11,8 @@ Note that it is hosted using a different repository (Dina's personal repository 
 The following are example prompts that were tested out:
 
 <p align="center">
-  <img src="../images/ChatGent-Demo/example-cultural-centers.jpg" alt="ChatGent app QR code" width="500"/>
-  <img src="../images/ChatGent-Demo/example-english-construction.jpg" alt="ChatGent app QR code" width="500"/>
-  <img src="../images/ChatGent-Demo/example-english-parking.jpg" alt="ChatGent app QR code" width="500"/>
-  <img src="../images/ChatGent-Demo/example-gentse-feesten.jpg" alt="ChatGent app QR code" width="500"/>
+  <img src="../images/ChatGent-Demo/example-cultural-centers.jpg" alt="Example about cultural centers" width="500"/>
+  <img src="../images/ChatGent-Demo/example-gentse-feesten.jpg" alt="Example about Gentse Feesten" width="500"/>
+  <img src="../images/ChatGent-Demo/example-samson-gert.jpg" alt="Example about Samson en Gert" width="500"/>
+  <img src="../images/ChatGent-Demo/example-zwemmen.jpg" alt="Example about zwemmen" width="500"/>
 </p>
