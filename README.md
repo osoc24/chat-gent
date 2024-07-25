@@ -16,3 +16,4 @@ This repository contains a few different things:
 - [website](./website) - the source code for the ChatGent website
 - [streamlit app](./streamlit) - the source code for the ChatGent streamlit app
 - [json files](./json_files) - example questions and queries file, along with annotations file that contains labels.
+- [slides](./slides.pdf) - the slides used during the final presentation
