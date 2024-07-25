@@ -65,8 +65,8 @@ def generate_sparql_query(user_question, label_data, examples_data):
 
     """
     response = client.chat.completions.create(
-            #model="gpt-3.5-turbo",
-            model="gpt-4o-mini",
+            model="gpt-3.5-turbo",
+            #model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant that generates SPARQL queries to be run on a SPARQL endpoint containing data about decisions of the city of Gent based on user questions and labels of decisions related to their questions. Your language is Dutch."},
                 {"role": "user", "content": prompt}
@@ -84,8 +84,8 @@ def check_sparql_query(query):
     Don't add '`' to the query as you wish.
     """
     response_2 = client.chat.completions.create(
-            #model="gpt-3.5-turbo",
-            model="gpt-4o-mini",
+            model="gpt-3.5-turbo",
+            #model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a SPARQL query refiner."},
                 {"role": "user", "content": prompt}
@@ -183,54 +183,41 @@ if prompt := st.chat_input("Stel hier uw vraag..."):
             resources.append(d['derivedFrom'])
             resources_names.append(d['title'])
 
-        ## Old prompt
-        # prompt_2 = f"""
-        # If the user's prompt is not a question, chat normally. If it is a question do the following:
-
-        #     The following is the question the user asked: {user_question}
-        #     Based on the following data: {cleaned_decisions}, which is retrieved decisions only (ONLY THEM), generate a response that answers their question, don't hallucinate!
-
-        #     But before showing your answer to the user, check if it matches the user's question: {user_question}. If it relates but doesn't answer exactly mention that "it might relate but isn't necessarily the answer they want".
-        #     Show the resources: {resources} to the end-user so they can refer to them. Format the links where the {resources_names} are shown as links which are the {resources}.
-
-        # IMPORTANT NOTES TO TAKE INTO ACCOUNT:
-        #     - If you don't have any answer or potential resources from the decisions, don't refer to any external links (including the city of Gent's website).
-        #     - Don't show empty lists in your answer. 
-        #     - Use the word "besluiten" instead of "beslissingen" when referring to decisions.
-        #     - Answer in the language the user asked in.
-        #     - For questions about dates of events: take into account the current year. So if it's 2024, you answer for 2024 and not 2023 unless they ask for a specific year like 2023.
-        #     - Be friendly and explain in a way an ordinary person can understand. The language city officials use is often very different from the language citizens use (officials wind up speaking in departments and form numbers instead of needs in big organizations).
-        # """
-
         prompt_2 = f"""
-        If the user's prompt is not a question, chat normally. If it is a question, follow these steps:
-
+        ELEMENTS TO USE:
         1. User's question: {user_question}
-        2. Data (retrieved decisions only): {cleaned_decisions}
-        3. You can refer to resources of relevance on https://stad.gent but only there. Don't surf online.
+        2. Data to use for answer: {cleaned_decisions}
 
-        Generate a response that answers their question without hallucinating. 
-        Answer in the language the user asked in (For example, if they ask in English, answer in English).
+        YOUR ROLE: 
+        - You answer the user's question. However, chat normally if the user's prompt is not a question.
+        - You answer in the language the user asked in. For example,if they ask in English, you answer in English, and if they ask in Dutch, you answer in Dutch.
 
-        IMPORTANT NOTES:
-        - If the retrieved decisions' dates don't match the current date in year {today}, mention that they are old.
-        - If you don't have an answer or potential resources from the decisions, don't refer to any external links.
-        - Don't show empty lists in your answer.
-        - Use "besluiten" instead of "beslissingen" for decisions.
-        - Make sure to answer in the context of the year of the current date: {today}, unless a specific year is mentioned.
-        - Be friendly and explain in plain language, avoiding bureaucratic terms.
+        INSTRUCTIONS:
+        - If it is a question, generate a response using ONLY the given data.
+        - The date today is {today}. Answer with that in mind.
+        - If you do not have data, the only external links you are allowed to refer to when looking for an answer are:
+            - https://stad.gent
+            - https://gentsefeesten.stad.gent
+        - If the question is asking about a date of an event and the data provided is from the past, say you do not know.
 
-        Before showing your answer, ensure it matches the user's question:
+        REQUIREMENTS YOU MUST FOLLOW:
+        1. If the retrieved decisions' dates do not match the current date's year: {today}, you must tell the user that it's not recent.
+        2. If you don't have an answer, you are only allowed to refer the user to https://stad.gent website.
+        3. You are only allowed to use the provided data to compile the answer.
+        4. Use the word "besluiten" when referring to decisions in the Dutch language. Don't use "beslissingen".
+        5. Be friendly and use plain language, avoiding bureaucratic terms.
+
+        LAST IMPORTANT STEPS YOU MUST FOLLOW: Before showing your answer, ensure it matches the user's question:
         - If it relates but doesn't answer exactly, mention: "It might relate but isn't necessarily the answer you want."
         - Provide the resources in bullet points: {resources}, formatted with the {resources_names} as links ({resources}).
-
+        
         """
         
         completion_2 = client.chat.completions.create(
         #model="gpt-3.5-turbo",
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant for the citizens of Gent when they ask a question on the city's website regarding the decisions made by the city. Be friendly, speak in easy to use terms. You use both the user's question and relevant decisions passed to you."},
+            {"role": "system", "content": "You are a helpful assistant for the citizens of Gent when they ask a question on the city's website regarding the decisions made by the city."},
             {"role": "user", "content": prompt_2}
         ],
         temperature=0
