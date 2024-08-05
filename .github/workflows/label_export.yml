@@ -42,12 +42,12 @@ jobs:
         run: python ./export_annotations.py --annotations-csv=False --annotations-json=../json_files/annotations.json --fetch-children=False
         working-directory: ./label_export
       - name: Upload labels JSON
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4.3.5
         with:
           name: labels
           path: ./json_files/annotations.json
       - name: Upload labels with children JSON
-        uses: actions/upload-artifact@v4.3.4
+        uses: actions/upload-artifact@v4.3.5
         with:
           name: labels_with_children
           path: ./json_files/annotations_with_children.json
